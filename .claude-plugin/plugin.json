@@ -1,0 +1,1 @@
+{ "name": "statusline", "version": "0.1.0", "description": "Status line: context %, model, provider, 5h/7d quota, cwd, git branch" }

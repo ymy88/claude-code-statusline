@@ -1,0 +1,5 @@
+{
+  "name": "claude-code-statusline",
+  "owner": { "name": "ymy88" },
+  "plugins": [{ "name": "statusline", "source": "./" }]
+}
