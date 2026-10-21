@@ -1,1 +1,8 @@
-{ "name": "statusline", "version": "0.1.0", "description": "Status line: context %, model, provider, 5h/7d quota, cwd, git branch" }
+{
+  "name": "statusline",
+  "version": "0.1.0",
+  "description": "Status line: context %, model, provider, 5h/7d quota, cwd, git branch",
+  "author": { "name": "ymy88" },
+  "repository": "https://github.com/ymy88/claude-code-statusline",
+  "keywords": ["statusline", "status-line", "context-window", "rate-limit", "quota", "git-branch"]
+}
