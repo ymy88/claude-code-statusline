@@ -12,7 +12,7 @@ ctx 42% | Opus 5.5 | Claude Plan | 5h 75% · 7d 12% | ~/path/to/project | main
 
 Percentages are green below 70, yellow from 70, red from 90.
 
-The plugin only fills in `statusLine` when your own settings have none, so a `statusLine` in `~/.claude/settings.json` still wins. Remove it there to use this one.
+Claude Code plugins cannot provide `statusLine` directly, so on each session start the plugin writes `statusLine` into `~/.claude/settings.json`, pointing at its own `statusline.sh`. It also updates that path after a plugin update. A `statusLine` you set yourself is left alone: remove it to use this one. The status line appears from the session after the one where you install the plugin.
 
 Requires `jq`.
 
