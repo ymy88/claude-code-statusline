@@ -18,6 +18,7 @@ MAGENTA=$'\033[35m'
 GREEN=$'\033[32m'
 YELLOW=$'\033[33m'
 RED=$'\033[31m'
+BLUE=$'\033[94m'
 
 # Color a 0-100 percentage: green <70, yellow 70-89, red 90+.
 pct_color() {
@@ -66,7 +67,7 @@ if [ -f "$TRANSCRIPT" ]; then
         | if .t0 then .start = .t0 | .end = ($e | ts) | .out = ($e.message.usage.output_tokens // 0) else . end
       else . end)
     | if .out > 0 and .end > .start then .out / (.end - .start) | floor else empty end')
-  [ -n "$RATE" ] && SPEED_SEG="${DIM}${RATE} tok/s${RESET}"
+  [ -n "$RATE" ] && SPEED_SEG="${BLUE}${RATE} tok/s${RESET}"
 fi
 
 # 3) provider

@@ -1,6 +1,6 @@
 {
   "name": "statusline",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Status line: context %, model, tok/s, provider, 5h/7d quota, cwd, git branch",
   "author": { "name": "ymy88" },
   "license": "MIT",
