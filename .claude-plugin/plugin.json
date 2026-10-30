@@ -1,7 +1,7 @@
 {
   "name": "statusline",
-  "version": "0.2.0",
-  "description": "Status line: context %, model, provider, 5h/7d quota, cwd, git branch",
+  "version": "0.3.0",
+  "description": "Status line: context %, model, tok/s, provider, 5h/7d quota, cwd, git branch",
   "author": { "name": "ymy88" },
   "license": "MIT",
   "repository": "https://github.com/ymy88/claude-code-statusline",

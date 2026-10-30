@@ -3,10 +3,10 @@
 A Claude Code plugin that sets the status line to:
 
 ```
-ctx 42% | Opus 5.5 | Claude Plan | 5h 75% · 7d 12% | ~/path/to/project | main
+ctx 42% | Opus 5.5 | 48 tok/s | Claude Plan | 5h 75% · 7d 12% | ~/path/to/project | main
 ```
 
-- context window usage, model, provider (Claude Plan / Vertex AI / Bedrock / Custom API)
+- context window usage, model, output speed of the last API call (tok/s), provider (Claude Plan / Vertex AI / Bedrock / Custom API)
 - 5-hour and 7-day quota (subscription plans only)
 - current directory and git branch (yellow when the working tree has changes)
 
