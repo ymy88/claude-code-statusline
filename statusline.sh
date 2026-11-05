@@ -11,6 +11,16 @@
 
 input=$(cat)
 
+# Save usage for this session, so the session can read it: ~/.claude/usage/$CLAUDE_CODE_SESSION_ID.json
+# ponytail: one file per session, never deleted; add cleanup if the directory grows too big.
+SID=$(echo "$input" | jq -r '.session_id // empty')
+if [ -n "$SID" ]; then
+  USAGE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/usage"
+  mkdir -p "$USAGE_DIR" &&
+    echo "$input" | jq '{updated_at: (now | floor), context_used_percentage: .context_window.used_percentage, rate_limits}' \
+      > "$USAGE_DIR/$SID.json.tmp" && mv "$USAGE_DIR/$SID.json.tmp" "$USAGE_DIR/$SID.json"
+fi
+
 RESET=$'\033[0m'
 DIM=$'\033[2m'
 CYAN=$'\033[36m'
